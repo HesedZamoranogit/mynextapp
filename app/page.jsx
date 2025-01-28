@@ -1,10 +1,16 @@
 import React from 'react';
  // Asegúrate de que la ruta sea correcta
+import styles from './home.module.css';
 
 const HomePage = () => {
+
+  const egresado = true;
+
   return (
     <div>
-      <h1>Bienvenido a la Página Principal</h1>
+      <h1
+      className={`${styles['title']} ${!egresado ? styles['title--hidden'] : ''}`}
+      >Bienvenido a la Página Principal</h1>
     </div>
   );
 };
